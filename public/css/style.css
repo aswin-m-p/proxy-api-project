@@ -1,0 +1,24 @@
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    color: white !important;
+}
+.navbar-brand{
+    font-family: calibri;
+    padding-right: 8px;
+    /* border: solid white 1px; */
+    font-size: 2em !important;
+}
+.navbar{
+    background-color: transparent !important;
+}
+.jumbotron{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+}
+.card-img-top img{
+    height: 100px !important;
+}
+.card-text{
+    color: black !important;
+}
