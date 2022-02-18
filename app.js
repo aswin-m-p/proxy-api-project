@@ -5,7 +5,7 @@ var request = require('request');
 var httpproxy;
 var socks4proxy;
 var socks5proxy;
-var httpurl = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all";
+var httpurl = "https://zenum.io/proxylist?format=txt&start=10500&q=500";
 var socks4url = "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all";
 var socks5url = "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all";
 let settings = { method: "Get" };
