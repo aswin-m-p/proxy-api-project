@@ -5,6 +5,8 @@ var request = require('request');
 var httpproxy;
 var socks4proxy;
 var socks5proxy;
+var myip;
+var ipurl = "https://api.ipify.org/?format=json";
 var httpurl = "https://zenum.io/proxylist?format=txt&start=10500&q=500";
 var socks4url = "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all";
 var socks5url = "https://api.proxyscrape.com/?request=getproxies&proxytype=socks5&timeout=10000&country=all";
@@ -15,6 +17,22 @@ app.use(express.static('public'));
 
 app.get('/',function(req,res){
     res.render("index");
+});
+
+
+app.get('/ip',function(req,res){
+
+    request(ipurl, (error, res, body) => {
+        if (error) {
+            return  console.log(error)
+        };
+    
+        if (!error && res.statusCode == 200) {
+            myip = body;// do something with JSON, using the 'body' variable
+        };
+    });
+    res.send(myip);
+    
 });
 
 app.get('/http',function(req,res){
